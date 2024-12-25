@@ -3,6 +3,9 @@ dotenv.config({path:".env"});
 import dbconnect from "./db/index.js"
 import {app} from "./app.js";
 
+app.set('view engine', 'ejs');
+
+
 
 dbconnect().then(()=>{
     app.on("err",()=>{
